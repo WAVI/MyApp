@@ -13,10 +13,14 @@ export class AccountComponent implements OnInit {
     name: string,
     status: string
   }
-
   @Input() id: number;
 
   constructor(private accountsService: AccountService) {
+    
+    this.accountsService.statusUpdated
+      .subscribe(
+        (status: string) => alert(`new Status: ${status}`)
+      )
    }
 
   ngOnInit() {

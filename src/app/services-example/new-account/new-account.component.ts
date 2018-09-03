@@ -10,10 +10,6 @@ export class NewAccountComponent implements OnInit {
 
   constructor(private accountService: AccountService) { 
     
-    this.accountService.statusUpdated
-      .subscribe(
-        (status: string) => alert(`new Status: ${status}`)
-      )
   }
 
   ngOnInit() {
