@@ -1,0 +1,17 @@
+<div class="container">
+  <app-cockpit (serverCreated)="onServerAdded($event)" (blueprintCreated)="onBlueprintAdded($event)"></app-cockpit>
+  
+  <hr>
+  <button 
+    class="btn btn-danger"
+    (click) = "onDeleteFirst()"
+    > Delete first </button>
+  <app-server-element *ngFor="let server of serverElements" [serverElement]="server">
+    <p *ngIf="server.type === 'server'; else elseBlock" style="color: red">SERVER</p>
+
+    <ng-template #elseBlock>
+        <p style="color: blue">BLUEPRINT</p>
+    </ng-template>
+    <!-- <p *ngIf="server.type === 'blueprint'" style="color: blue">BLUEPRINT</p> -->
+  </app-server-element>
+</div>

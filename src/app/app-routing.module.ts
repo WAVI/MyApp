@@ -2,6 +2,8 @@ import { NgModule } from "@angular/core";
 import { RouterModule, Routes } from '@angular/router'
 import { BasicComponentComponent } from "./basic-component/basic-component.component";
 import { AppComponent } from "./app.component";
+import { DataBindingComponentComponent } from "./data-binding-component/data-binding-component.component";
+import { DirectivesComponentComponent } from "./directives-component/directives-component.component";
 
 const routes: Routes =[
     {
@@ -12,6 +14,17 @@ const routes: Routes =[
     {
         path: 'basicComponent',
         component: BasicComponentComponent
+    },
+    {
+        path: 'dataComponent',
+        component: DataBindingComponentComponent
+    },
+    {
+        path: 'directiveComponent',
+        component: DirectivesComponentComponent
+    },
+    {
+        path: '**', redirectTo: ''
     }
 ]
 
