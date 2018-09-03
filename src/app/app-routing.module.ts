@@ -4,6 +4,7 @@ import { BasicComponentComponent } from "./basic-component/basic-component.compo
 import { AppComponent } from "./app.component";
 import { DataBindingComponentComponent } from "./data-binding-component/data-binding-component.component";
 import { DirectivesComponentComponent } from "./directives-component/directives-component.component";
+import { ServicesExampleComponent } from "./services-example/services-example.component";
 
 const routes: Routes =[
     {
@@ -22,6 +23,11 @@ const routes: Routes =[
     {
         path: 'directiveComponent',
         component: DirectivesComponentComponent
+    },
+    {
+        path: 'servicesExample',
+        component: ServicesExampleComponent
+
     },
     {
         path: '**', redirectTo: ''

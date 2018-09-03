@@ -13,6 +13,10 @@ import { ServerElementComponent } from './data-binding-component/server-element/
 import { DirectivesComponentComponent } from './directives-component/directives-component.component';
 import { BasicHighlightDirective } from './directives-component/basic-highlight/basic-highlight.directive';
 import { BetterHighlightDirective } from './directives-component/better-highlight/better-highlight.directive';
+import { ServicesExampleComponent } from './services-example/services-example.component';
+import { AccountComponent } from './services-example/account/account.component';
+import { NewAccountComponent } from './services-example/new-account/new-account.component';
+import { AccountService } from './services-example/accounts.service';
 
 
 @NgModule({
@@ -26,14 +30,17 @@ import { BetterHighlightDirective } from './directives-component/better-highligh
     ServerElementComponent,
     DirectivesComponentComponent,
     BasicHighlightDirective,
-    BetterHighlightDirective
+    BetterHighlightDirective,
+    ServicesExampleComponent,
+    AccountComponent,
+    NewAccountComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     AppRoutingModule,
   ],
-  providers: [],
+  providers: [AccountService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
