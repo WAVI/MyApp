@@ -20,12 +20,10 @@ export class CockpitComponent implements OnInit {
   }
 
   onAddServer() { 
-    
     this.serverCreated.emit({
       serverName: this.serverNameInput.nativeElement.value === '' ? '-/-' : this.serverNameInput.nativeElement.value ,
       serverContent: this.serverContentInput.nativeElement.value === '' ? '-/-' : this.serverContentInput.nativeElement.value 
     })
-    console.log('Emitted');
   }
 
   onAddBluePrint(){ 
